@@ -1,7 +1,11 @@
-// src/pages/Home.jsx
+import { useState } from "react";
 
 export default function Home() {
+
+  const [activeSection, setActiveSection] = useState("home");
+
   return (
+
     <div className="relative h-screen w-screen overflow-hidden bg-[#0B0008] text-white">
 
       {/* Background Glow */}
@@ -20,7 +24,7 @@ export default function Home() {
         }}
       />
 
-      {/* Subtle Noise */}
+      {/* Subtle Noise Texture */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_0.4px,transparent_0.4px)] bg-[size:6px_6px]" />
 
       {/* Garet Font */}
@@ -40,54 +44,134 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <div className="absolute left-24 top-[42%] z-20 flex flex-col gap-8">
+      <div className="absolute left-24 top-[40%] z-20 flex flex-col gap-9">
 
         {[
           "PROJECTS",
-          "JOURNEY",
+          "PERSPECTIVE",
           "CAPABILITIES",
           "CONTACT",
         ].map((item) => (
+
           <button
             key={item}
-            className="group flex w-fit items-center gap-10 text-left text-[20px] tracking-[3px] text-[#FF69D5] transition-all duration-300 hover:scale-[1.05]"
+            onClick={() => setActiveSection(item.toLowerCase())}
+            className="
+              group
+              flex
+              w-fit
+              items-center
+              gap-12
+              text-left
+              text-[20px]
+              tracking-[3px]
+              text-[#FF69D5]
+              transition-all
+              duration-300
+              ease-out
+              hover:scale-[1.05]
+            "
           >
-            <span className="garet-font">{item}</span>
 
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
+            <span className="garet-font">
+              {item}
+            </span>
+
+            <span className="transition-transform duration-300 ease-out group-hover:translate-x-1">
               →
             </span>
+
           </button>
+
         ))}
+
       </div>
 
       {/* Main Composition */}
-      <div className="relative z-10 flex h-full flex-col items-center pt-[5%]">
+      <div className="relative z-10 flex h-full flex-col items-center pt-[6%]">
 
-        {/* Title */}
-        <h1 className="garet-font text-[72px] font-light tracking-[6px] text-white whitespace-nowrap">
+        {/* Main Title */}
+        <h1 className="garet-font whitespace-nowrap text-[76px] font-light tracking-[6px] text-white">
           AGRAWAL CHIRAG
         </h1>
 
         {/* Subtitle */}
-        <div className="mt-4 w-[720px]">
-          <p className="garet-font text-left text-[13px] tracking-[1px] text-white/85">
-            • SYSTEMS &nbsp;&nbsp;&nbsp;
-            • STORIES &nbsp;&nbsp;&nbsp;
-            • INTERACTIONS
-          </p>
+        <p className="garet-font mt-3 text-[15px] font-medium tracking-[1px] text-white/90">
+          • SYSTEMS &nbsp;&nbsp;&nbsp;
+          • STORIES &nbsp;&nbsp;&nbsp;
+          • INTERACTIONS
+        </p>
+
+        {/* Dynamic Right Panel */}
+        <div className="mt-20 flex flex-col items-center">
+
+          {/* HOME STATE */}
+          {activeSection === "home" && (
+
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+              alt="placeholder"
+              className="
+                w-[270px]
+                object-cover
+                opacity-95
+                drop-shadow-[0_35px_70px_rgba(0,0,0,0.65)]
+              "
+            />
+
+          )}
+
+          {/* PERSPECTIVE STATE */}
+          {activeSection === "perspective" && (
+
+            <div className="flex flex-col items-center">
+
+              <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
+
+                Most of my work starts from curiosity, observation,
+                or a system that feels unnecessarily complicated.
+                I enjoy breaking things down, understanding how
+                they function, and experimenting with ways to
+                make them feel more interactive, structured,
+                or meaningful.
+
+              </p>
+
+              <button
+                className="
+                  garet-font
+                  mt-24
+                  flex
+                  items-center
+                  gap-5
+                  text-[24px]
+                  tracking-[4px]
+                  text-[#FFDcf5]/80
+                  transition-all
+                  duration-300
+                  ease-out
+                  hover:scale-[1.05]
+                  hover:text-[#FFDcf5]
+                "
+              >
+
+                <span>OPEN PERSPECTIVE</span>
+
+                <span className="transition-transform duration-300 ease-out hover:translate-x-1">
+                  →
+                </span>
+
+              </button>
+
+            </div>
+
+          )}
+
         </div>
 
-        {/* Floating Photo */}
-        <div className="mt-10">
-
-          <img
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
-            alt="placeholder"
-            className="w-[270px] object-cover opacity-95 drop-shadow-[0_35px_70px_rgba(0,0,0,0.65)]"
-          />
-        </div>
       </div>
+
     </div>
+
   );
 }
