@@ -1,16 +1,46 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal developer portfolio website currently under active development.
 
-Currently, two official plugins are available:
+The portfolio is being built to showcase projects, workflow-oriented systems, automation tools, and interactive frontend experiments in a structured and minimal format.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Current development includes:
 
-## React Compiler
+* SPA-based homepage interaction system
+* Project showcase architecture
+* Interactive navigation workflows
+* Responsive frontend structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js
+* Vite
+* JavaScript
+* CSS
+
+---
+
+## Current Status
+
+Work in progress.
+
+The project is currently focused on building the core frontend structure, interaction flow, and portfolio architecture before deployment and visual refinement.
+
+---
+
+## Planned Sections
+
+* Project Showcase
+* Interactive Experiments
+* GitHub Integration
+* Technical Workflow Highlights
+* Writing & Publishing Section
+* Contact / Profile Links
+
+---
+
+## Purpose
+
+The goal of this portfolio is to create a clean and interaction-focused space for presenting technical projects and systems-oriented development work.
