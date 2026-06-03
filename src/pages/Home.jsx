@@ -3,6 +3,7 @@ import instagramIcon from "../images/instagram.png";
 import githubIcon from "../images/github.png";
 import linkedinIcon from "../images/linkedin.png";
 import gmailIcon from "../images/gmail.png";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -98,8 +99,8 @@ export default function Home() {
 
         {/* Main Title */}
         <button
-  onClick={() => setActiveSection("home")}
-  className="
+          onClick={() => setActiveSection("home")}
+          className="
     garet-font
     whitespace-nowrap
     text-[76px]
@@ -112,9 +113,9 @@ export default function Home() {
     hover:scale-[1.02]
     hover:text-white/90
   "
->
-  AGRAWAL CHIRAG
-</button> 
+        >
+          AGRAWAL CHIRAG
+        </button>
 
         {/* Subtitle */}
         <p className="garet-font mt-3 text-[15px] font-medium tracking-[1px] text-white/90">
@@ -144,18 +145,18 @@ export default function Home() {
 
           {activeSection === "beyond code" && (
 
-  <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
 
-    <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
+              <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
 
-      A collection of books, interactive experiences,
-      and creative projects that explore ideas beyond
-      traditional software development.
+                A collection of books, interactive experiences,
+                and creative projects that explore ideas beyond
+                traditional software development.
 
-    </p>
+              </p>
 
-    <button
-      className="
+              <button
+                className="
         garet-font
         mt-24
         flex
@@ -170,31 +171,31 @@ export default function Home() {
         hover:scale-[1.05]
         hover:text-[#FFDcf5]
       "
-    >
-      <span>ENTER BEYOND CODE</span>
-      <span>→</span>
-    </button>
+              >
+                <span>ENTER BEYOND CODE</span>
+                <span>→</span>
+              </button>
 
-  </div>
+            </div>
 
-)}
+          )}
 
-        {/* PROJECTS STATE */}
-{activeSection === "projects" && (
+          {/* PROJECTS STATE */}
+          {activeSection === "projects" && (
 
-  <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
 
-    <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
+              <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
 
-      From workflow systems and publishing platforms
-      to games and interactive experiences, each
-      project explores a different challenge,
-      process, or idea.
+                From workflow systems and publishing platforms
+                to games and interactive experiences, each
+                project explores a different challenge,
+                process, or idea.
 
-    </p>
+              </p>
 
-    <button
-      className="
+              <button
+                className="
         garet-font
         mt-24
         flex
@@ -209,19 +210,19 @@ export default function Home() {
         hover:scale-[1.05]
         hover:text-[#FFDcf5]
       "
-    >
+              >
 
-      <span>EXPLORE PROJECTS</span>
+                <span>EXPLORE PROJECTS</span>
 
-      <span className="transition-transform duration-300 ease-out">
-        →
-      </span>
+                <span className="transition-transform duration-300 ease-out">
+                  →
+                </span>
 
-    </button>
+              </button>
 
-  </div>
+            </div>
 
-)}
+          )}
 
           {/* PERSPECTIVE STATE */}
           {activeSection === "perspective" && (
@@ -239,51 +240,50 @@ export default function Home() {
 
               </p>
 
-              <button
+              <Link
+                to="/perspective"
                 className="
-                  garet-font
-                  mt-24
-                  flex
-                  items-center
-                  gap-5
-                  text-[24px]
-                  tracking-[4px]
-                  text-[#FFDcf5]/80
-                  transition-all
-                  duration-300
-                  ease-out
-                  hover:scale-[1.05]
-                  hover:text-[#FFDcf5]
-                "
+                garet-font
+                mt-24
+                flex
+                items-center
+                gap-5
+                text-[24px]
+                tracking-[4px]
+                text-[#FFDcf5]/80
+                transition-all
+                duration-300
+                ease-out
+                hover:scale-[1.05]
+                hover:text-[#FFDcf5]
+              "
               >
-
                 <span>OPEN PERSPECTIVE</span>
 
                 <span className="transition-transform duration-300 ease-out hover:translate-x-1">
                   →
                 </span>
-
-              </button>
+              </Link>
 
             </div>
 
           )}
 
           {/* CAPABILITIES STATE */}
-{activeSection === "capabilities" && (
+          {activeSection === "capabilities" && (
 
-  <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
 
-    <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
+              <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
 
-      An overview of the capabilities, tools, and
-      disciplines that support the work showcased
-      throughout this portfolio.
+                An overview of the capabilities, tools, and
+                disciplines that support the work showcased
+                throughout this portfolio.
 
-    </p>
+              </p>
 
-    <button
-      className="
+              <button
+                className="
         garet-font
         mt-24
         flex
@@ -298,32 +298,32 @@ export default function Home() {
         hover:scale-[1.05]
         hover:text-[#FFDcf5]
       "
-    >
+              >
 
-      <span>EXPLORE CAPABILITIES</span>
+                <span>EXPLORE CAPABILITIES</span>
 
-      <span className="transition-transform duration-300 ease-out group-hover:translate-x-1">
-        →
-      </span>
+                <span className="transition-transform duration-300 ease-out group-hover:translate-x-1">
+                  →
+                </span>
 
-    </button>
+              </button>
 
-  </div>
+            </div>
 
-)}
+          )}
 
-      
-{/* CONTACT STATE */}
-{activeSection === "contact" && (
 
-  <div className="mt-4 flex flex-col items-start gap-8">
+          {/* CONTACT STATE */}
+          {activeSection === "contact" && (
 
-    {/* Personal Instagram */}
-    <a
-      href="https://www.instagram.com/agrawal_chirag1201?igsh=ZWh5YnlseGs0Z2I5"
-      target="_blank"
-      rel="noreferrer"
-      className="
+            <div className="mt-4 flex flex-col items-start gap-8">
+
+              {/* Personal Instagram */}
+              <a
+                href="https://www.instagram.com/agrawal_chirag1201?igsh=ZWh5YnlseGs0Z2I5"
+                target="_blank"
+                rel="noreferrer"
+                className="
         flex
         items-center
         gap-5
@@ -333,24 +333,24 @@ export default function Home() {
         ease-out
         hover:scale-[1.03]
       "
-    >
-      <img
-        src={instagramIcon}
-        alt="Instagram"
-        className="h-8 w-8 object-contain"
-      />
+              >
+                <img
+                  src={instagramIcon}
+                  alt="Instagram"
+                  className="h-8 w-8 object-contain"
+                />
 
-      <span className="garet-font text-[18px]">
-        Instagram · Personal Account
-      </span>
-    </a>
+                <span className="garet-font text-[18px]">
+                  Instagram · Personal Account
+                </span>
+              </a>
 
-    {/* Creator Instagram */}
-    <a
-      href="https://www.instagram.com/mintmuse1201?igsh=MXUwMnBkM3AzN2U5bA=="
-      target="_blank"
-      rel="noreferrer"
-      className="
+              {/* Creator Instagram */}
+              <a
+                href="https://www.instagram.com/mintmuse1201?igsh=MXUwMnBkM3AzN2U5bA=="
+                target="_blank"
+                rel="noreferrer"
+                className="
         flex
         items-center
         gap-5
@@ -360,24 +360,24 @@ export default function Home() {
         ease-out
         hover:scale-[1.03]
       "
-    >
-      <img
-        src={instagramIcon}
-        alt="Instagram"
-        className="h-8 w-8 object-contain"
-      />
+              >
+                <img
+                  src={instagramIcon}
+                  alt="Instagram"
+                  className="h-8 w-8 object-contain"
+                />
 
-      <span className="garet-font text-[18px]">
-        Instagram · Creator Page
-      </span>
-    </a>
+                <span className="garet-font text-[18px]">
+                  Instagram · Creator Page
+                </span>
+              </a>
 
-    {/* GitHub */}
-    <a
-      href="https://github.com/chiragmittal1201"
-      target="_blank"
-      rel="noreferrer"
-      className="
+              {/* GitHub */}
+              <a
+                href="https://github.com/chiragmittal1201"
+                target="_blank"
+                rel="noreferrer"
+                className="
         flex
         items-center
         gap-5
@@ -387,24 +387,24 @@ export default function Home() {
         ease-out
         hover:scale-[1.03]
       "
-    >
-      <img
-        src={githubIcon}
-        alt="GitHub"
-        className="h-8 w-8 object-contain"
-      />
+              >
+                <img
+                  src={githubIcon}
+                  alt="GitHub"
+                  className="h-8 w-8 object-contain"
+                />
 
-      <span className="garet-font text-[18px]">
-        GitHub
-      </span>
-    </a>
+                <span className="garet-font text-[18px]">
+                  GitHub
+                </span>
+              </a>
 
-    {/* LinkedIn */}
-    <a
-      href="https://www.linkedin.com/in/agrawal-chirag-686367202"
-      target="_blank"
-      rel="noreferrer"
-      className="
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/agrawal-chirag-686367202"
+                target="_blank"
+                rel="noreferrer"
+                className="
         flex
         items-center
         gap-5
@@ -414,53 +414,53 @@ export default function Home() {
         ease-out
         hover:scale-[1.03]
       "
-    >
-      <img
-        src={linkedinIcon}
-        alt="LinkedIn"
-        className="h-8 w-8 object-contain"
-      />
+              >
+                <img
+                  src={linkedinIcon}
+                  alt="LinkedIn"
+                  className="h-8 w-8 object-contain"
+                />
 
-      <span className="garet-font text-[18px]">
-        LinkedIn
-      </span>
-    </a>
+                <span className="garet-font text-[18px]">
+                  LinkedIn
+                </span>
+              </a>
 
-    {/* Gmail */}
-    <div className="flex items-center gap-5 text-white/90">
+              {/* Gmail */}
+              <div className="flex items-center gap-5 text-white/90">
 
-      <a
-        href="mailto:chiragmittal1201@gmail.com"
-        className="
+                <a
+                  href="mailto:chiragmittal1201@gmail.com"
+                  className="
           transition-all
           duration-300
           ease-out
           hover:scale-[1.08]
         "
-      >
-        <img
-          src={gmailIcon}
-          alt="Email"
-          className="h-8 w-8 object-contain"
-        />
-      </a>
+                >
+                  <img
+                    src={gmailIcon}
+                    alt="Email"
+                    className="h-8 w-8 object-contain"
+                  />
+                </a>
 
-      <span
-        className="
+                <span
+                  className="
           garet-font
           text-[18px]
           select-all
           cursor-text
         "
-      >
-        chiragmittal1201@gmail.com
-      </span>
+                >
+                  chiragmittal1201@gmail.com
+                </span>
 
-    </div>
+              </div>
 
-  </div>
+            </div>
 
-)}
+          )}
 
         </div>
 
