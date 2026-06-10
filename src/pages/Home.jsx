@@ -4,7 +4,7 @@ import githubIcon from "../images/github.png";
 import linkedinIcon from "../images/linkedin.png";
 import gmailIcon from "../images/gmail.png";
 import { Link } from "react-router-dom";
-
+import profileImage from "../assets/images/profile.webp";
 
 export default function Home() {
 
@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
 
-    <div className="relative h-screen w-screen overflow-hidden bg-[#0B0008] text-white">
+    <div className="relative min-h-screen w-screen overflow-x-hidden bg-[#0B0008] text-white">
 
       {/* Background Glow */}
       <div
@@ -33,24 +33,32 @@ export default function Home() {
       {/* Subtle Noise Texture */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_0.4px,transparent_0.4px)] bg-[size:6px_6px]" />
 
-      {/* Garet Font */}
-      <style>
-        {`
-          @import url('https://fonts.cdnfonts.com/css/garet');
-
-          .garet-font {
-            font-family: 'Garet', sans-serif;
-          }
-        `}
-      </style>
 
       {/* Logo */}
-      <div className="absolute left-24 top-16 z-20">
+      <div className="absolute left-6 top-6 z-20 md:left-24 md:top-16">
         <div className="h-4 w-4 rotate-45 border border-white/60"></div>
       </div>
 
       {/* Navigation */}
-      <div className="absolute left-24 top-[40%] z-20 flex flex-col gap-9">
+      <div
+        className="
+    absolute
+    bottom-8
+    left-1/2
+    z-20
+    flex
+    flex-wrap
+    justify-center
+    gap-4
+    -translate-x-1/2
+    md:left-24
+    md:top-[40%]
+    md:bottom-auto
+    md:translate-x-0
+    md:flex-col
+    md:gap-9
+  "
+      >
 
         {[
           "PROJECTS",
@@ -64,20 +72,22 @@ export default function Home() {
             key={item}
             onClick={() => setActiveSection(item.toLowerCase())}
             className="
-              group
-              flex
-              w-fit
-              items-center
-              gap-12
-              text-left
-              text-[20px]
-              tracking-[3px]
-              text-[#FF69D5]
-              transition-all
-              duration-300
-              ease-out
-              hover:scale-[1.05]
-            "
+          group
+          flex
+          w-fit
+          items-center
+          gap-2
+          md:gap-12
+          text-left
+          text-[14px]
+          md:text-[20px]
+          tracking-[3px]
+          text-[#FF69D5]
+          transition-all
+          duration-300
+          ease-out
+          hover:scale-[1.05]
+        "
           >
 
             <span className="garet-font">
@@ -131,7 +141,7 @@ export default function Home() {
           {activeSection === "home" && (
 
             <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+              src={profileImage}
               alt="placeholder"
               className="
                 w-[270px]
@@ -140,6 +150,7 @@ export default function Home() {
                 drop-shadow-[0_35px_70px_rgba(0,0,0,0.65)]
               "
             />
+
 
           )}
 
@@ -155,26 +166,27 @@ export default function Home() {
 
               </p>
 
-              <button
+              <Link
+                to="/beyond-code"
                 className="
-        garet-font
-        mt-24
-        flex
-        items-center
-        gap-5
-        text-[24px]
-        tracking-[4px]
-        text-[#FFDcf5]/80
-        transition-all
-        duration-300
-        ease-out
-        hover:scale-[1.05]
-        hover:text-[#FFDcf5]
-      "
+                garet-font
+                mt-24
+                flex
+                items-center
+                gap-5
+                text-[24px]
+                tracking-[4px]
+                text-[#FFDcf5]/80
+                transition-all
+                duration-300
+                ease-out
+                hover:scale-[1.05]
+                hover:text-[#FFDcf5]
+                      "
               >
                 <span>ENTER BEYOND CODE</span>
                 <span>→</span>
-              </button>
+              </Link>
 
             </div>
 
