@@ -10,9 +10,18 @@ export default function Home() {
 
   const [activeSection, setActiveSection] = useState("home");
 
+  const navItems = [
+    "PROJECTS",
+    "BEYOND CODE",
+    "PERSPECTIVE",
+    "CAPABILITIES",
+    "CONTACT",
+  ];
+
   return (
 
-    <div className="relative min-h-screen w-screen overflow-x-hidden bg-[#0B0008] text-white">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-[#0B0008] text-white">
+      {/* Root wrapper allows vertical content growth on mobile; it is not forcing a fixed content height. */}
 
       {/* Background Glow */}
       <div
@@ -42,15 +51,16 @@ export default function Home() {
       {/* Navigation */}
       <div
         className="
-    absolute
-    bottom-8
-    left-1/2
-    z-20
-    flex
-    flex-wrap
-    justify-center
-    gap-4
-    -translate-x-1/2
+    hidden
+    md:absolute
+    md:bottom-8
+    md:left-1/2
+    md:z-20
+    md:flex
+    md:flex-wrap
+    md:justify-center
+    md:gap-4
+    md:-translate-x-1/2
     md:left-24
     md:top-[40%]
     md:bottom-auto
@@ -60,13 +70,7 @@ export default function Home() {
   "
       >
 
-        {[
-          "PROJECTS",
-          "BEYOND CODE",
-          "PERSPECTIVE",
-          "CAPABILITIES",
-          "CONTACT",
-        ].map((item) => (
+        {navItems.map((item) => (
 
           <button
             key={item}
@@ -105,15 +109,18 @@ export default function Home() {
       </div>
 
       {/* Main Composition */}
-      <div className="relative z-10 flex h-full flex-col items-center pt-[6%]">
+      <div className="relative z-10 flex flex-col items-center pt-8 px-6 pb-[160px] md:pt-[6%] md:px-0 md:pb-0">
+        {/* Main content wrapper uses normal flow and mobile-friendly spacing. */}
+        {/* Removing h-full here avoids fixing the page height so mobile sections can grow fully. */}
 
         {/* Main Title */}
         <button
           onClick={() => setActiveSection("home")}
           className="
     garet-font
-    whitespace-nowrap
-    text-[76px]
+    text-center
+    text-[clamp(2.2rem,8vw,4rem)]
+    md:text-[76px]
     font-light
     tracking-[6px]
     text-white
@@ -122,20 +129,20 @@ export default function Home() {
     ease-out
     hover:scale-[1.02]
     hover:text-white/90
+    max-w-full
+    break-words
   "
         >
           AGRAWAL CHIRAG
         </button>
 
         {/* Subtitle */}
-        <p className="garet-font mt-3 text-[15px] font-medium tracking-[1px] text-white/90">
-          • SYSTEMS &nbsp;&nbsp;&nbsp;
-          • STORIES &nbsp;&nbsp;&nbsp;
-          • INTERACTIONS
+        <p className="garet-font mt-2 md:mt-3 text-center text-[clamp(0.8rem,2.4vw,0.95rem)] font-medium tracking-[1px] text-white/90 max-w-full">
+          • SYSTEMS • STORIES • INTERACTIONS
         </p>
 
         {/* Dynamic Right Panel */}
-        <div className="mt-20 flex flex-col items-center">
+        <div className="mt-8 flex flex-col items-center md:mt-20">
 
           {/* HOME STATE */}
           {activeSection === "home" && (
@@ -144,15 +151,48 @@ export default function Home() {
               src={profileImage}
               alt="placeholder"
               className="
-                w-[270px]
+                w-[150px]
+                sm:w-[190px]
+                md:w-[270px]
                 object-cover
                 opacity-95
                 drop-shadow-[0_35px_70px_rgba(0,0,0,0.65)]
               "
             />
 
-
           )}
+
+          <div className="mt-4 flex w-full max-w-[330px] flex-col items-center gap-2 md:hidden">
+            {navItems.map((item) => (
+              <button
+                key={item}
+                onClick={() => setActiveSection(item.toLowerCase())}
+                className="
+                  group
+                  flex
+                  w-full
+                  items-center
+                  justify-center
+                  gap-2
+                  rounded-full
+                  border border-[#FF69D5]/20
+                  bg-white/5
+                  py-3
+                  text-center
+                  text-[15px]
+                  tracking-[2px]
+                  text-[#FF69D5]
+                  transition-all
+                  duration-300
+                  ease-out
+                  hover:bg-white/10
+                  hover:scale-[1.01]
+                "
+              >
+                <span className="garet-font">{item}</span>
+              </button>
+            ))}
+          </div>
 
           {activeSection === "beyond code" && (
 
@@ -170,7 +210,8 @@ export default function Home() {
                 to="/beyond-code"
                 className="
                 garet-font
-                mt-24
+                mt-12
+                md:mt-24
                 flex
                 items-center
                 gap-5
@@ -197,7 +238,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center">
 
-              <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
+              <p className="garet-font w-full max-w-full md:max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
 
                 From workflow systems and publishing platforms
                 to games and interactive experiences, each
@@ -209,7 +250,8 @@ export default function Home() {
               <button
                 className="
         garet-font
-        mt-24
+        mt-16
+        md:mt-24
         flex
         items-center
         gap-5
@@ -256,7 +298,8 @@ export default function Home() {
                 to="/perspective"
                 className="
                 garet-font
-                mt-24
+                mt-12
+                md:mt-24
                 flex
                 items-center
                 gap-5
@@ -286,7 +329,7 @@ export default function Home() {
 
             <div className="flex flex-col items-center">
 
-              <p className="garet-font max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
+              <p className="garet-font w-full max-w-full md:max-w-[760px] text-center text-[18px] leading-[2.25] text-white/88">
 
                 An overview of the capabilities, tools, and
                 disciplines that support the work showcased
@@ -297,7 +340,8 @@ export default function Home() {
               <button
                 className="
         garet-font
-        mt-24
+        mt-16
+        md:mt-24
         flex
         items-center
         gap-5
@@ -473,6 +517,8 @@ export default function Home() {
             </div>
 
           )}
+
+          <div className="h-[160px] w-full md:hidden" />
 
         </div>
 

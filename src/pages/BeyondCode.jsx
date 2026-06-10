@@ -21,7 +21,7 @@ export default function BeyondCode() {
       title: "BIRTHDAY WEBSITE",
       type: "Interactive Experience",
       image: birthdayWebsite,
-      link: "#",
+      link: "https://project-gubbara.vercel.app/",
     },
 
     {
@@ -38,6 +38,58 @@ export default function BeyondCode() {
       link: "#",
     },
   ];
+
+  const isExternalLink = (url) => typeof url === "string" && url.startsWith("http");
+
+  const ProjectLink = ({ href, className, children }) =>
+    isExternalLink(href) ? (
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    ) : (
+      <Link to={href} className={className}>
+        {children}
+      </Link>
+    );
+
+  const renderProjectCard = (project) => (
+    <div key={project.title} className="flex flex-col items-center">
+      <div className="relative">
+        <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-4 text-xl">
+          📌
+        </div>
+
+        <ProjectLink href={project.link} className="block">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="
+              h-[360px]
+              w-[250px]
+              rounded-md
+              object-cover
+              shadow-xl
+              transition-all
+              duration-300
+              hover:scale-[1.03]
+              hover:shadow-[0_0_40px_rgba(255,255,255,0.15)]
+            "
+          />
+        </ProjectLink>
+      </div>
+
+      <h3 className="garet-font mt-8 text-center text-lg tracking-[3px]">{project.title}</h3>
+
+      <p className="mt-2 text-center text-white/50">{project.type}</p>
+
+      <ProjectLink
+        href={project.link}
+        className="mt-5 text-sm tracking-[2px] text-[#FF69D5]/80 transition-all duration-300 hover:text-[#FF69D5]"
+      >
+        OPEN →
+      </ProjectLink>
+    </div>
+  );
 
   return (
     <div className="relative min-h-screen text-white">
@@ -173,96 +225,10 @@ export default function BeyondCode() {
             xl:grid-cols-4
           "
         >
-          {projects.map((project) => (
-
-            <div
-              key={project.title}
-              className="
-                flex
-                flex-col
-                items-center
-              "
-            >
-
-              <div className="relative">
-
-                <div
-                  className="
-                    absolute
-                    left-1/2
-                    top-0
-                    z-20
-                    -translate-x-1/2
-                    -translate-y-4
-                    text-xl
-                  "
-                >
-                  📌
-                </div>
-
-                <Link to={project.link}>
-
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="
-                      h-[360px]
-                      w-[250px]
-                      rounded-md
-                      object-cover
-                      shadow-xl
-                      transition-all
-                      duration-300
-                      hover:scale-[1.03]
-                      hover:shadow-[0_0_40px_rgba(255,255,255,0.15)]
-                    "
-                  />
-
-                </Link>
-
-              </div>
-
-              <h3
-                className="
-                  garet-font
-                  mt-8
-                  text-center
-                  text-lg
-                  tracking-[3px]
-                "
-              >
-                {project.title}
-              </h3>
-
-              <p
-                className="
-                  mt-2
-                  text-center
-                  text-white/50
-                "
-              >
-                {project.type}
-              </p>
-
-              <Link
-                to={"https://project-gubbara.vercel.app/"}
-                className="
-              mt-5
-              text-sm
-              tracking-[2px]
-              text-[#FF69D5]/80
-              transition-all
-              duration-300
-              hover:text-[#FF69D5]
-              "
-              >
-                OPEN →
-              </Link>
-
-            </div>
-
-          ))}
+          {projects.map(renderProjectCard)}
         </div>
+
+        <div className="h-[160px] md:hidden" />
 
       </div>
     </div >
