@@ -338,7 +338,8 @@ export default function Home() {
 
               </p>
 
-              <button
+              <Link
+                to="/capabilities"
                 className="
         garet-font
         mt-16
@@ -363,7 +364,7 @@ export default function Home() {
                   →
                 </span>
 
-              </button>
+              </Link>
 
             </div>
 
@@ -514,6 +515,43 @@ export default function Home() {
                 </span>
 
               </div>
+
+              {/* Resume Download */}
+              <a
+                href="/Chirag_Agrawal_Resume.pdf"
+                download="Chirag_Agrawal_Resume.pdf"
+                className="
+    flex
+    items-center
+    gap-5
+    text-white/90
+    transition-all
+    duration-300
+    ease-out
+    hover:scale-[1.03]
+  "
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={1.8}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 16V4m0 12l-4-4m4 4l4-4M5 20h14"
+                  />
+                </svg>
+
+                <span className="garet-font text-[18px]">
+                  Resume
+                </span>
+
+              </a>
 
             </div>
 

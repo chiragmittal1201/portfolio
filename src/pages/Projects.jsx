@@ -10,7 +10,7 @@ export default function Projects() {
         github: "https://github.com/chiragmittal1201/BridgeNet",
         live: "https://alumni-management-240b6.web.app",
         description:
-          "A networking platform designed to connect students, alumni, and institutions through mentorship, opportunities, and long-term professional relationships.",
+          "More than a college project, BridgeNet is an attempt to build a long-term ecosystem connecting students, alumni, and institutions. It represents my interest in product thinking, network-driven systems, and solving problems that continue to exist long after graduation.",
       },
 
       {
@@ -18,7 +18,7 @@ export default function Projects() {
         status: "Work In Progress",
         github: "#",
         description:
-          "Custom billing and customer ledger software built for a niche market still dependent on handwritten bills and manually maintained records.",
+          "Bill Set was born from a real business problem I encountered firsthand. Instead of building another generic business application, the goal is to modernize a niche market that still relies heavily on handwritten workflows, reducing errors and improving operational efficiency.",
       },
     ],
 

@@ -149,6 +149,7 @@ export default function BeyondCode() {
               duration-300
               hover:scale-105
               hover:text-[#FF69D5]
+              hover:scale-105
             "
           >
             HOME
@@ -161,6 +162,7 @@ export default function BeyondCode() {
               duration-300
               hover:scale-105
               hover:text-[#FF69D5]
+              hover:scale-105
             "
           >
             PROJECTS
@@ -173,6 +175,7 @@ export default function BeyondCode() {
               duration-300
               hover:scale-105
               hover:text-[#FF69D5]
+              hover:scale-105
             "
           >
             PERSPECTIVE
@@ -185,6 +188,7 @@ export default function BeyondCode() {
               duration-300
               hover:scale-105
               hover:text-[#FF69D5]
+              hover:scale-105
             "
           >
             CAPABILITIES
