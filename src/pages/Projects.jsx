@@ -161,7 +161,16 @@ export default function Projects() {
 
         {/* Navigation */}
 
-        <div className="flex flex-wrap justify-center gap-12 text-sm tracking-[5px] text-white/60">
+        <div
+          className="
+            flex
+            flex-wrap
+            justify-center
+            gap-4
+            text-center
+            md:gap-12
+          "
+        >
           <Link
             to="/"
             className="
@@ -206,9 +215,9 @@ export default function Projects() {
 
         {/* Hero */}
 
-        <div className="mt-10">
+        <div className="mt-6 md:mt-10">
 
-          <h1 className="garet-font text-9xl md:text-6xl">
+          <h1 className="garet-font text-5xl md:text-8xl">
             PROJECTS
           </h1>
 
@@ -229,7 +238,18 @@ export default function Projects() {
             CATEGORIES
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-25">
+          <div
+            className="
+            mt-6
+            flex
+            flex-wrap
+            justify-center
+            gap-4
+            md:mt-10
+            md:justify-start
+            md:gap-16
+            "
+          >
 
             {["featured", "products", "services", "automation", "experiments"].map(
               (category) => (
@@ -271,7 +291,13 @@ export default function Projects() {
 
           {/* Project List */}
 
-          <div className="space-y-5">
+          <div
+            className="
+            space-y-4
+            text-center
+            lg:text-left
+            "
+          >
 
             {projects[activeCategory].map((project) => (
 
@@ -309,9 +335,9 @@ export default function Projects() {
 
           {activeProject && (
 
-            <div className="max-w-3xl">
+            <div className="w-full max-w-3xl">
 
-              <h2 className="garet-font text-3xl md:text-5xl">
+              <h2 className="garet-font text-4xl md:text-6xl">
                 {activeProject.title}
               </h2>
 
@@ -319,7 +345,15 @@ export default function Projects() {
                 {activeProject.status}
               </p>
 
-              <p className="mt-10 text-white/60 leading-loose">
+              <p
+                className="
+                  mt-6
+                  text-white/70
+                  leading-relaxed
+                  md:mt-10
+                  md:leading-loose
+                "
+              >
                 {activeProject.description}
               </p>
 
@@ -391,7 +425,7 @@ export default function Projects() {
 
         </div>
 
-        <div className="h-[200px]" />
+        <div className="h-[220px] md:h-[200px]" />
 
       </div>
     </div>
