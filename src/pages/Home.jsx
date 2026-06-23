@@ -247,7 +247,8 @@ export default function Home() {
 
               </p>
 
-              <button
+              <Link
+                to="/projects"
                 className="
         garet-font
         mt-16
@@ -272,7 +273,7 @@ export default function Home() {
                   →
                 </span>
 
-              </button>
+              </Link>
 
             </div>
 
