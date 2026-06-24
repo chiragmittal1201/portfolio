@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import wallDesktop from "../assets/images/beyond-code-wall-desktop.png";
 import wallMobile from "../assets/images/beyond-code-wall-mobile.webp";
 
-import loveBeyondPower from "../assets/images/love-beyond-power.webp";
+import loveBeyondPower from "../assets/images/love-beyond-power.png";
 import birthdayWebsite from "../assets/images/birthday-website.png";
 import noOneKilledVaidehi from "../assets/images/no-one-killed-vaidehi.png";
 import whatWeCarryAfter from "../assets/images/what-we-carry-after.png";

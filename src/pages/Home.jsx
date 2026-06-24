@@ -4,7 +4,7 @@ import githubIcon from "../images/github.png";
 import linkedinIcon from "../images/linkedin.png";
 import gmailIcon from "../images/gmail.png";
 import { Link } from "react-router-dom";
-import profileImage from "../assets/images/profile.webp";
+import profileImage from "../assets/images/profile.jpg";
 
 export default function Home() {
 
