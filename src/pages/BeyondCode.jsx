@@ -14,7 +14,7 @@ export default function BeyondCode() {
       title: "LOVE BEYOND POWER",
       type: "Novel",
       image: loveBeyondPower,
-      link: "#",
+      link: "https://open-shelf.netlify.app/books/a-love-beyond-power/",
     },
 
     {
@@ -28,14 +28,14 @@ export default function BeyondCode() {
       title: "NO ONE KILLED VAIDEHI",
       type: "Mystery Novel",
       image: noOneKilledVaidehi,
-      link: "#",
+      link: "https://open-shelf.netlify.app/books/no-one-killed-vaidehi/",
     },
 
     {
       title: "WHAT WE CARRY AFTER",
-      type: "Coming Soon",
+      type: "On hold",
       image: whatWeCarryAfter,
-      link: "#",
+      link: "https://open-shelf.netlify.app/books/what-we-carry-after/",
     },
   ];
 
