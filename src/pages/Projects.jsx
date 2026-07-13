@@ -14,15 +14,24 @@ export default function Projects() {
       },
 
       {
-        title: "Bill Set",
-        status: "Work In Progress",
-        github: "#",
+        title: "Full-Stack Ecommerce Platform",
+        status: "Finished",
+        github: "https://github.com/chiragmittal1201/Ecommerce",
         description:
-          "Bill Set was born from a real business problem I encountered firsthand. Instead of building another generic business application, the goal is to modernize a niche market that still relies heavily on handwritten workflows, reducing errors and improving operational efficiency.",
+          "Full-stack ecommerce platform built with React, Node.js, Express, MongoDB, and JWT authentication featuring customer & admin dashboards, product management, order processing, coupons, contact management, and configurable payment/delivery settings.",
       },
     ],
 
     products: [
+
+      {
+        title: "Full-Stack Ecommerce Platform",
+        status: "Finished",
+        github: "https://github.com/chiragmittal1201/Ecommerce",
+        description:
+          "Full-stack ecommerce platform built with React, Node.js, Express, MongoDB, and JWT authentication featuring customer & admin dashboards, product management, order processing, coupons, contact management, and configurable payment/delivery settings.",
+      },
+      
       {
         title: "BridgeNet",
         status: "Work In Progress",
