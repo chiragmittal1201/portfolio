@@ -7,6 +7,7 @@ import loveBeyondPower from "../assets/images/love-beyond-power.png";
 import birthdayWebsite from "../assets/images/birthday-website.png";
 import noOneKilledVaidehi from "../assets/images/no-one-killed-vaidehi.png";
 import whatWeCarryAfter from "../assets/images/what-we-carry-after.png";
+import WhenStoriesBecameHistory from "../assets/images/WhenStoriesBecameHistory.png";
 
 export default function BeyondCode() {
   const projects = [
@@ -36,6 +37,13 @@ export default function BeyondCode() {
       type: "On hold",
       image: whatWeCarryAfter,
       link: "https://open-shelf.netlify.app/books/what-we-carry-after/",
+    },
+
+    {
+      title: "WHEN STORIES BECAME HISTORY",
+      type: "Nonfiction – Mythology & History",
+      image: WhenStoriesBecameHistory,
+      link: "https://open-shelf.netlify.app/books/when-stories-became-history/",
     },
   ];
 

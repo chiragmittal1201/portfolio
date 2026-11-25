@@ -1,46 +1,73 @@
-# Portfolio
+# ChiragLabs
 
-Personal developer portfolio website currently under active development.
+A personal portfolio showcasing projects, products, services, experiments, and the thinking behind how I approach building digital solutions.
 
-The portfolio is being built to showcase projects, workflow-oriented systems, automation tools, and interactive frontend experiments in a structured and minimal format.
+The portfolio brings together my work across product development, business-oriented systems, automation, frontend experiences, and creative projects.
 
-Current development includes:
+**Live Website:** https://chiraglabs.web.app
 
-* SPA-based homepage interaction system
-* Project showcase architecture
-* Interactive navigation workflows
-* Responsive frontend structure
+---
+
+## Overview
+
+Rather than serving as a conventional project gallery, this portfolio focuses on both the work itself and the value behind it.
+
+It highlights:
+
+- Products and applications built around practical use cases.
+- Services and backend systems developed for specific requirements.
+- Automation tools designed to simplify workflows.
+- Interactive experiments exploring ideas and functionality.
+- Perspectives, capabilities, and contributions beyond writing code.
 
 ---
 
 ## Tech Stack
 
-* React.js
-* Vite
-* JavaScript
-* CSS
+- React.js
+- Vite
+- JavaScript
+- Tailwind CSS
+- Firebase Hosting
 
 ---
 
-## Current Status
+## Structure
 
-Work in progress.
-
-The project is currently focused on building the core frontend structure, interaction flow, and portfolio architecture before deployment and visual refinement.
-
----
-
-## Planned Sections
-
-* Project Showcase
-* Interactive Experiments
-* GitHub Integration
-* Technical Workflow Highlights
-* Writing & Publishing Section
-* Contact / Profile Links
+| Section | Purpose |
+|---|---|
+| Home | Introduction and navigation |
+| Projects | Products, services, automation, and experiments |
+| Perspective | How I approach problems and development |
+| Capabilities | The value and contributions I bring to projects |
+| Beyond Code | Creative interests and work outside development |
 
 ---
 
-## Purpose
+## Development
 
-The goal of this portfolio is to create a clean and interaction-focused space for presenting technical projects and systems-oriented development work.
+The core portfolio structure and deployment are complete.
+
+Development will continue through periodic updates, including:
+
+- Adding new projects and work.
+- Refining existing sections and content.
+- Improving interactions and responsive experiences.
+- Incorporating new ideas as the portfolio evolves.
+
+---
+
+## Deployment
+
+The portfolio is built using Vite and deployed through Firebase Hosting.
+
+To run locally:
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+**Status:** Live · Continuously evolving
